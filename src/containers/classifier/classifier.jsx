@@ -24,6 +24,7 @@ class Classifier extends Component {
     }
   }
    render(){
+    const {classright} = this.state
        return(
          <div className="classifier">
            {/*内容*/}
@@ -41,8 +42,12 @@ class Classifier extends Component {
              <div className="classifier_left">
                <ul className="lists">
                  {/* v-for="(L1List, index) in classifier.categoryL1List" :key="index" @click="getIndex(index)" :className="{active: indexActive === index}"*/}
+                 {
+                   classright.map((L1List, index) => (
+                     <li path="classifier/classright">{L1List.name}</li>
+                   ))
+                 }
 
-                 <li path="classifier/classright">name</li>
              </ul>
            </div>
            {/*右侧*/}
