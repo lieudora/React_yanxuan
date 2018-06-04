@@ -12,19 +12,23 @@ import {reqClassifier} from '../../api'
 
 class Classifier extends Component {
   state = {
-    classright:{}
+    classright:{},
+    categoryL1List:[]
   }
-  async componentDidMount(){
+  async componentWillMount(){
     const result = await reqClassifier()
     if(result.code ===0 ){
         const classright = result.data
         this.setState({
         classright
       })
+      this.setState({
+        categoryL1List:classright.categoryL1List
+      })
     }
   }
    render(){
-    const {classright} = this.state
+    const {categoryL1List} = this.state
        return(
          <div className="classifier">
            {/*内容*/}
@@ -41,9 +45,8 @@ class Classifier extends Component {
              {/*左侧*/}
              <div className="classifier_left">
                <ul className="lists">
-                 {/* v-for="(L1List, index) in classifier.categoryL1List" :key="index" @click="getIndex(index)" :className="{active: indexActive === index}"*/}
                  {
-                   classright.map((L1List, index) => (
+                   categoryL1List.map((L1List, index) => (
                      <li path="classifier/classright">{L1List.name}</li>
                    ))
                  }
