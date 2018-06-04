@@ -47,7 +47,7 @@ class Classifier extends Component {
                <ul className="lists">
                  {
                    categoryL1List.map((L1List, index) => (
-                     <li path="classifier/classright">{L1List.name}</li>
+                     <li path="classifier/classright" key={index}>{L1List.name}</li>
                    ))
                  }
 
@@ -55,7 +55,7 @@ class Classifier extends Component {
            </div>
            {/*右侧*/}
            {/*:indexActive="indexActive" :classifier="classifier"*/}
-             <Classright categoryL1List=categoryL1List/>
+             <Classright />
    </div>
    </div>
        )
