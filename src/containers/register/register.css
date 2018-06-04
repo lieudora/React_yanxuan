@@ -1,0 +1,145 @@
+.register {
+  width: 80%;
+  height: 100%;
+  padding-top: 40px;
+  margin: auto;
+}
+.register .register_content {
+  height: 150px;
+  line-height: 200px;
+}
+.register .register_content .strict {
+  width: 130px;
+  margin: auto;
+}
+.register .register_content .strict img {
+  display: inline-block;
+  background-size: 100%;
+  width: 100%;
+}
+.register .login_header_title {
+  height: 30px;
+  margin: auto;
+  width: 60%;
+  display: flex;
+  text-align: center;
+}
+.register .login_header_title a {
+  width: 100px;
+  flex: 1;
+  margin: 0 5px;
+}
+.register .login_header_title a.on {
+  border-bottom: 2px solid #b4282d;
+}
+.register .verify {
+  width: 100%;
+  height: 340px;
+}
+.register .verify form {
+  width: 100%;
+  height: 340px;
+}
+.register .verify form .showinput {
+  width: 100%;
+  height: 160px;
+  display: none;
+}
+.register .verify form .showinput.on {
+  display: block;
+}
+.register .verify form .showinput .verify_login {
+  width: 100%;
+  height: 50px;
+  background: #f4f4f4;
+  border-bottom: 1px solid #777;
+}
+.register .verify form .showinput .verify_login input {
+  background: #f4f4f4;
+  height: 100%;
+  width: 100%;
+}
+.register .verify form .showinput .verify_register {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #777;
+}
+.register .verify form .showinput .verify_register input {
+  background: #f4f4f4;
+  height: 100%;
+  width: 100%;
+}
+.register .verify form .showinput .captcha {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #777;
+}
+.register .verify form .showinput .captcha input {
+  background: #f4f4f4;
+  height: 100%;
+  width: 100%;
+}
+.register .verify form .showinput .issue {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  color: #333;
+}
+.register .verify form .showinput .issue .left {
+  position: absolute;
+  width: 49%;
+  height: 40px;
+  left: 0;
+  top: 0;
+}
+.register .verify form .showinput .issue .right {
+  width: 49%;
+  height: 50px;
+  right: 0;
+}
+.register .verify form .showinput .issue .right span {
+  position: absolute;
+  display: inline-block;
+  right: 0;
+}
+.register .verify form .btn {
+  width: 100%;
+  height: 100px;
+}
+.register .verify form .btn .btn_login {
+  width: 100%;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  background: #b4282d;
+  border-radius: 2px;
+}
+.register .verify form .btn .btn_login a {
+  display: inline-block;
+  color: #fff;
+}
+.register .verify form .btn .btn_else {
+  width: 100%;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 2px;
+  border: 1px solid #b4282d;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+.register .verify form .btn .btn_else a {
+  display: inline-block;
+  color: #b4282d;
+}
+.register .verify form .btn .btn_register {
+  width: 100%;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+}
+.register .verify form .btn .btn_register a {
+  display: inline-block;
+  color: #333;
+}

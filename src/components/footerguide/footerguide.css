@@ -1,0 +1,31 @@
+.footer_guide {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 50px;
+  display: flex;
+}
+.footer_guide .guide_item {
+  display: flex;
+  flex: 1;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+  color: #999;
+}
+.footer_guide .guide_item.on {
+  color: #be464a;
+}
+.footer_guide .guide_item span {
+  font-size: 12px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.footer_guide .guide_item span .iconfont {
+  font-size: 20px;
+}

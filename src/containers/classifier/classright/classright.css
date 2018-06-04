@@ -1,0 +1,53 @@
+.right {
+  width: 76.5%;
+  height: 100%;
+  display: inline-block;
+}
+.right .right_title {
+  width: 100%;
+  height: 160px;
+  font-size: 13px;
+}
+.right .right_title img {
+  display: block;
+  width: 90%;
+  height: 100px;
+  margin: 14px;
+}
+.right .right_title .title {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+.right .right_title .title .iconfont,
+.right .right_title .title span {
+  display: inline-block;
+}
+.right .right_picture {
+  width: 100%;
+  height: 100%;
+}
+.right .right_picture .right_lists {
+  width: 100%;
+}
+.right .right_picture .right_lists .right_li {
+  display: inline-block;
+  width: 32%;
+  height: 118px;
+  overflow: hidden;
+}
+.right .right_picture .right_lists .right_li img {
+  width: 81px;
+  height: 81px;
+  background-size: 100%;
+  margin: auto;
+}
+.right .right_picture .right_lists .right_li .right_text {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  font-size: 12px;
+  vertical-align: top;
+  line-height: 20px;
+}

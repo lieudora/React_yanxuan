@@ -1,0 +1,106 @@
+.profile {
+  width: 100%;
+  height: 100%;
+}
+.profile .profile_content {
+  width: 90%;
+  height: 100%;
+  padding-top: 40px;
+  margin: auto;
+}
+.profile .profile_content .strict {
+  width: 100%;
+  height: 200px;
+  text-align: center;
+}
+.profile .profile_content .strict .strict_img {
+  width: 100%;
+  height: 200px;
+  line-height: 200px;
+}
+.profile .profile_content .strict .strict_img img {
+  width: 150px;
+  display: inline-block;
+  background-size: 100%;
+}
+.profile .profile_content .login {
+  width: 100%;
+  height: 150px;
+}
+.profile .profile_content .login .login_phone {
+  width: 100%;
+  height: 45px;
+  background: #b4282d;
+  border: 1px solid #b4282d;
+  text-align: center;
+  line-height: 45px;
+  margin-bottom: 10px;
+}
+.profile .profile_content .login .login_phone .iconfont {
+  color: #fff;
+}
+.profile .profile_content .login .login_phone span {
+  display: inline-block;
+  width: 103px;
+  height: 45px;
+  color: #fff;
+  font-size: 14px;
+}
+.profile .profile_content .login .login_mail {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #b4282d;
+  text-align: center;
+  line-height: 45px;
+  color: #b4282d;
+}
+.profile .profile_content .login .login_mail span {
+  display: inline-block;
+  width: 103px;
+  height: 45px;
+  color: #b4282d;
+  font-size: 14px;
+}
+.profile .profile_content .login .login_mail .icon-xin {
+  color: #b4282d;
+  font-size: 14px;
+}
+.profile .profile_content .login .register {
+  width: 100%;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+}
+.profile .profile_content .login .register span {
+  display: inline-block;
+  width: 115px;
+  height: 45px;
+  font-size: 14px;
+}
+.profile .profile_content .foot {
+  width: 100%;
+  height: 100px;
+  margin-top: 168px;
+}
+.profile .profile_content .foot .foot_content {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  text-align: center;
+}
+.profile .profile_content .foot .foot_content .footwei {
+  width: 100px;
+  border-right: 1px solid #979797;
+}
+.profile .profile_content .foot .foot_content .footqq {
+  width: 100px;
+  border-right: 1px solid #979797;
+}
+.profile .profile_content .foot .foot_content .footbo {
+  width: 100px;
+}
+.profile .iconfont {
+  display: inline-block;
+  font-size: 16px;
+  color: #333;
+}
