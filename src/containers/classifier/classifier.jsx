@@ -55,7 +55,7 @@ class Classifier extends Component {
            </div>
            {/*右侧*/}
            {/*:indexActive="indexActive" :classifier="classifier"*/}
-             <Classright/>
+             <Classright categoryL1List=categoryL1List/>
    </div>
    </div>
        )
