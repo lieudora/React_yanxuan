@@ -13,7 +13,8 @@ import {reqClassifier} from '../../api'
 class Classifier extends Component {
   state = {
     classright:{},
-    categoryL1List:[]
+    categoryL1List:[],
+    Index:0
   }
   async componentWillMount(){
     const result = await reqClassifier()
@@ -27,6 +28,12 @@ class Classifier extends Component {
       })
     }
   }
+  activeIndex(index){
+    this.setState({
+      Index : index
+    })
+  }
+
    render(){
     const {categoryL1List} = this.state
        return(
@@ -47,7 +54,7 @@ class Classifier extends Component {
                <ul className="lists">
                  {
                    categoryL1List.map((L1List, index) => (
-                     <li path="classifier/classright" key={index}>{L1List.name}</li>
+                     <li path="classifier/classright" key={index} onClick={() => this.activeIndex(index)}>{L1List.name}</li>
                    ))
                  }
 
@@ -55,7 +62,7 @@ class Classifier extends Component {
            </div>
            {/*右侧*/}
            {/*:indexActive="indexActive" :classifier="classifier"*/}
-             <Classright />
+             <Classright categoryL1List={categoryL1List}/>
    </div>
    </div>
        )

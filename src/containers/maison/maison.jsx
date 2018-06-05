@@ -22,7 +22,8 @@ class Maison extends Component {
     popularItemList:[],
     topicList:[],
     cateList:[],
-    headCateList:[]
+    headCateList:[],
+
   }
   async componentWillMount(){
       const result = await reqMaison()
@@ -38,6 +39,7 @@ class Maison extends Component {
           popularItemList:maison.popularItemList,
           topicList:maison.topicList,
           cateList:maison.cateList,
+
         })
       }
     }
@@ -95,7 +97,7 @@ class Maison extends Component {
                        headCateList.map((headItem, index) => (
                          <li className="tab" key={index}>
                            <span className="text">
-                            居家
+                             {headItem.name}
                            </span>
                          </li>
                        ))
@@ -351,27 +353,31 @@ class Maison extends Component {
                      <header className="home_title" >
                        <a href="javascript:;">
                          <div className="home_text" >
-                           <p>name好物</p>
+                           <p>{cateItem.name}好物</p>
                          </div>
                        </a>
                      </header>
                      <div className="home_content" >
                        <div className="home_con">
-                         <div className="home_lists" key={index}>
-                           <div className="home_img" >
-                             <img src="" alt=""/>
-                           </div>
-                           <div className="home_brief">
-                             宽细夹排，升级爽滑凉感
-                           </div>
-                           <div className="home_name">
-                             <span>天然宽篾头层青碳化竹凉席</span>
-                           </div>
-                           <div className="home_price">
-                             <span>¥</span>
-                             <span>124</span>
-                           </div>
-                         </div>
+                         {
+                           cateItem.itemList.map((Item, index) => (
+                             <div className="home_lists" key={index}>
+                               <div className="home_img" >
+                                 <img src={Item.listPicUrl} alt=""/>
+                               </div>
+                               <div className="home_brief">
+                                 {Item.simpleDesc}
+                               </div>
+                               <div className="home_name">
+                                 <span>{Item.name}</span>
+                               </div>
+                               <div className="home_price">
+                                 <span>¥</span>
+                                 <span>{Item.retailPrice}</span>
+                               </div>
+                             </div>
+                           ))
+                         }
                        </div>
                      </div>
                    </div>

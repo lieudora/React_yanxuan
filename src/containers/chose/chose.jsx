@@ -21,7 +21,9 @@ class Chose extends Component {
       zhenOne:[],
       zhenTwo:[],
       zhenThree:[],
-      yxLook:[]
+      yxLook:[],
+      findMore:[],
+      column:[]
     }
   async componentWillMount() {
     const result = await reqChose()
@@ -41,7 +43,8 @@ class Chose extends Component {
         zhenTwo:chose.zhenTwo,
         zhenThree:chose.zhenThree,
         yxLook:chose.yxLook,
-        findMore:chose.findMore
+        findMore:chose.findMore,
+        column:chose.column
       })
     }
   }
@@ -56,7 +59,8 @@ class Chose extends Component {
         zhenTwo,
         zhenThree,
         yxLook,
-        findMore
+        findMore,
+        column
       } =this.state
        return(
            <div>
@@ -72,11 +76,11 @@ class Chose extends Component {
                              <div className= "top_text">
                                <div className="strict">
                                  <i className="iconfont icon-yi"></i>
-                                 subTitle
+                                 {banItem.subTitle}
                                  <i className="iconfont icon-yi"></i>
                                </div>
-                               <div className="fairy"> title</div>
-                               <div className="subtrac"> ban</div>
+                               <div className="fairy">{banItem.title} </div>
+                               <div className="subtrac">{banItem.title}</div>
                              </div>
                            </div>
                          </a>
@@ -87,12 +91,20 @@ class Chose extends Component {
                  <div className="carousel_buttom">
                    <div className="carousel_buttom_wrap">
                      <div className="carousel_buttom_content">
-                       <a href="javascropt:;">
-                         <img src="" alt=""/>
-                         <div className="buttom_title">
-                           <span>title</span>
-                         </div>
-                       </a>
+                       {
+                         column.map((Item, index) => (
+                           <a href="javascropt:;" key={index}>
+                             <img src={Item.picUrl} alt=""/>
+                             <div className="buttom_title">
+                               <span>{Item.title}</span>
+                             </div>
+                             <div className="title">
+                               <div>{Item.articleCount}</div>
+                             </div>
+                           </a>
+                         ))
+                       }
+
                      </div>
                    </div>
                  </div>
@@ -310,43 +322,52 @@ class Chose extends Component {
                </div>
                {/*更多精彩*/}
 
-               <div className="more" >
-               {/*三张图*/}
-               <div className="more_content" >
-                 {/*图片*/}
-                 <div className="picture">
-                   <a href="#">
-                     <div className="more_img">
-                       <div className="img_left">
-                         <img src="" alt=""/>
-                       </div>
-                       <div className="more_top">
-                         <img src=""  alt=""/>
-                       </div>
-                       <div className="more_bottom">
-                         <img src=""  alt=""/>
-                       </div>
-                       <div className="text">
-                         title
-                       </div>
+               {
+                 findMore.map((Item, index) => (
+                   <div className="more"  key={index}>
+                     {/*三张图*/}
+
+                     <div className="more_content" >
+                     {/*图片*/}
+                     <div className="picture" style={{display: Item.picList.length? 'block': 'none'}}>
+                       <a href="#">
+                         <div className="more_img">
+                           <div className="img_left">
+                             <img src={Item.picList[1]} alt=""/>
+                           </div>
+                           <div className="more_top">
+                             <img src={Item.picList[2]}  alt=""/>
+                           </div>
+                           <div className="more_bottom">
+                             <img src={Item.picList[3]}  alt=""/>
+                           </div>
+                           <div className="text">
+                             {Item.title}
+                           </div>
+                         </div>
+                       </a>
                      </div>
-                   </a>
-                 </div>
-               </div>
-               {/*一张图*/}
-               <div className="picture_One">
-                 <a href="#">
-                   <div className="more_img">
-                     <div className="img_conter">
-                       <img src="" alt=""/>
                      </div>
-                     <div className="text">
-                       subTitle
+
+                    {/* 一张图片*/}
+                     <div className="picture_One" style={{display: Item.picList.length? 'none': 'block'}}>
+                       <a href="#">
+                         <div className="more_img">
+                           <div className="img_conter">
+                             <img src={Item.scenePicUrl} alt=""/>
+                           </div>
+                           <div className="text">
+                             {Item.subTitle}
+                           </div>
+                         </div>
+                       </a>
                      </div>
+
+
                    </div>
-                 </a>
-               </div>
-             </div>
+                 ))
+               }
+
            </div>
          </div>
        )
