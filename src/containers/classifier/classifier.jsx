@@ -4,7 +4,7 @@
 import React, {Component} from 'react'
 
 import {withRouter} from 'react-router-dom'
-
+import PropTypes from 'prop-types'
 import Classright from './classright/classright'
 
 import './classifier.styl'
@@ -34,6 +34,7 @@ class Classifier extends Component {
     })
   }
 
+
    render(){
     const {categoryL1List} = this.state
        return(
@@ -62,7 +63,7 @@ class Classifier extends Component {
            </div>
            {/*右侧*/}
            {/*:indexActive="indexActive" :classifier="classifier"*/}
-             <Classright categoryL1List={categoryL1List}/>
+             <Classright categoryL1List={categoryL1List[this.state.Index]}/>
    </div>
    </div>
        )

@@ -3,10 +3,9 @@
  */
 import React, {Component} from 'react'
 import {withRouter} from 'react-router-dom'
-
+import BScroll from 'better-scroll'
 import './chose.styl'
 import {
-  reqMaison,
   reqChose
 } from "../../api";
 
@@ -47,6 +46,13 @@ class Chose extends Component {
         column:chose.column
       })
     }
+  }
+  componentDidUpdate () {
+    /*轮播*/
+    let chose = new BScroll ('.carousel_top', {scrollX: true})
+    let choseBottom = new BScroll ('.carousel_buttom_wrap', {scrollX: true})
+    /*十刻*/
+    let choseTen = new BScroll ('.talk_content', {scrollX: true})
   }
    render(){
       const {

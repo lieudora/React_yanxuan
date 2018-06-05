@@ -23,7 +23,7 @@ class Maison extends Component {
     topicList:[],
     cateList:[],
     headCateList:[],
-
+    addClass:false
   }
   async componentWillMount(){
       const result = await reqMaison()
@@ -65,7 +65,16 @@ class Maison extends Component {
       // 专题精选
       let scrollSelection = new BScroll ('.selection_lists', {scrollX: true})
 
-  }
+      }
+        // activeIndex (event) {
+        //   let {addClass} = this.state
+        //   this.setState({
+        //     addClass:!addClass
+        //   })
+        //   event.target(
+        //     addClass:({className})
+        //   )
+        // }
        render(){
           const {
             newItemList,
@@ -95,7 +104,7 @@ class Maison extends Component {
                    <ul className="list">
                      {
                        headCateList.map((headItem, index) => (
-                         <li className="tab" key={index}>
+                         <li className="tab" key={index} onClick={() => (this.activeIndex)} >
                            <span className="text">
                              {headItem.name}
                            </span>
